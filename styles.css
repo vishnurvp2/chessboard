@@ -26,22 +26,20 @@ header {
 }
 
 header h1 {
-  font-size: 2.5rem;
+  font-size: clamp(1rem, 10vw, 2.7rem);
   text-align: center;
-  padding: 3%;
 }
 
 header p {
-  font-size: 1.1rem;
+  font-size: clamp(0.5rem, 5vw, 1rem);
   text-align: center;
   background-color: burlywood;
-  padding: 1.5%;
 }
 
 main {
   width: 100%;
   height: 75%;
-  background-color: red;
+  background-color: lightyellow;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,6 +49,15 @@ main {
 footer {
   width: 100%;
   height: 10%;
+  background-color: cornsilk;
+}
+footer p {
+  font-size: clamp(0.5rem, 5vw, 1rem);
+  text-align: center;
+}
+
+footer p:first-child {
+  font-size: clamp(1rem, 5vw, 2rem);
 }
 
 .chessboard {
@@ -75,4 +82,34 @@ footer {
 
 .white {
   background-color: wheat;
+}
+
+@media (min-aspect-ratio: 1.5/1) {
+  header {
+    width: 15%;
+    height: 100%;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  header h1 {
+    margin-bottom: 10vh;
+  }
+  main {
+    width: 75%;
+    height: 100%;
+    transition: all 0.5s ease;
+  }
+  footer {
+    width: 10%;
+    height: 100%;
+    transition: all 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  footer p:first-child {
+    margin-bottom: 10vh;
+  }
 }
